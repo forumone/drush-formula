@@ -12,8 +12,6 @@ install-composer:
       - cmd: get-composer
 
 install-drush:
-  cmd.wait:
+  cmd.run:
     - name: COMPOSER_HOME=/opt/drush COMPOSER_BIN_DIR=/usr/local/bin COMPOSER_VENDOR_DIR=/opt/drush/{{ salt['pillar.get']('drush:branch', '7') }} /usr/local/bin/composer require drush/drush:{{ salt['pillar.get']('drush:branch', '7') }}
     - cwd: /root/
-    - watch:
-      - cmd: install-composer
