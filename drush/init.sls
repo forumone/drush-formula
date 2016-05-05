@@ -15,10 +15,12 @@ https://github.com/drush-ops/drush.git:
     - composer: /usr/local/bin/composer
     - php: /usr/bin/php
 
+{% if salt['pillar.get']('drush:version') == '8.x' -%}
 composer-install-drush8:
   cmd.run:
     - name: /usr/local/bin/composer install
     - cwd: /opt/drush
+{%- endif %}
 
 # Execute once to make sure requisites are installed
 run-drush:
