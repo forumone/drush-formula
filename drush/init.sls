@@ -1,7 +1,7 @@
-# Grab the repo, branch from pillar. Default to 8.x.
+# Grab the repo, branch from pillar. Default to 6.x.
 https://github.com/drush-ops/drush.git:
   git.latest:
-    - rev: {{ salt['pillar.get']('drush:version', '8.x') }}
+    - rev: {{ salt['pillar.get']('drush:version', '6.x') }}
     - target: /opt/drush
 
 # Drop a symlink for users' paths
