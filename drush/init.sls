@@ -8,7 +8,7 @@ https://github.com/drush-ops/drush.git:
   composer.installed:
     - composer: /usr/local/bin/composer
     - php: /usr/bin/php
-    - watch:
+    - onchanges:
       - git: https://github.com/drush-ops/drush.git
 
 # Execute once to make sure requisites are installed
