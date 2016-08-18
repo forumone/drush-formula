@@ -24,4 +24,3 @@ run-drush:
   file.symlink:
     - target: /opt/drush/drush
     - onlyif: test -f /opt/drush/drush
-
