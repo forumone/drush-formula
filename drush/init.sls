@@ -1,4 +1,4 @@
-# Grab the repo, branch from pillar. Default to 6.x.
+# Grab the repo, branch from pillar. Default to 10.x.
 https://github.com/drush-ops/drush.git:
   git.latest:
     - rev: {{ salt['pillar.get']('drush:version', '10.x') }}
