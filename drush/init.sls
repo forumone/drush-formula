@@ -1,8 +1,9 @@
 # Grab the repo, branch from pillar. Default to 6.x.
 https://github.com/drush-ops/drush.git:
   git.latest:
-    - rev: {{ salt['pillar.get']('drush:version', '6.x') }}
+    - rev: {{ salt['pillar.get']('drush:version', '10.x') }}
     - target: /opt/drush
+    - force_reset: True
 
 /opt/drush:
   composer.installed:
